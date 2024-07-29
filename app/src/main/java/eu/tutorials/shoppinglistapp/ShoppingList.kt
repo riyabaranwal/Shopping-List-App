@@ -52,11 +52,12 @@ fun ShoppingListApp() {
     var itemQuantity by remember { mutableStateOf("") }
     Column(
         modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Button(
             onClick = { showDialog = true },
-            modifier = Modifier.align(Alignment.CenterHorizontally)
+           // modifier = Modifier.align(Alignment.CenterHorizontally)
         ) {
             Text("Add Item")
         }
@@ -117,7 +118,7 @@ fun ShoppingListApp() {
                                 }
                             }
             },
-            title = { Text("Add Shopping Item") },
+            title = { Text("ADD SHOPPING ITEM") },
             text = {
                 Column {
                     OutlinedTextField(
